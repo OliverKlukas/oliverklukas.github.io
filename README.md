@@ -4,4 +4,5 @@
 # Tech stack
 1. React with TypeScript
 2. Tailwind Css as design system
-3. Deployment to GitHub Pages
+3. GSAP for everything that moves
+4. Deployment to GitHub Pages
