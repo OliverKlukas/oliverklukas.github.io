@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.css';
-import LoadingPage from "./pages/LoadingPage";
+import LandingPage from "./pages/LandingPage";
+import ProjectPage from "./pages/ProjectPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
     return (
-        <>
-            <LoadingPage/>
-        </>
+        <div className="font-standard">
+            <LandingPage/>
+            <ProjectPage/>
+            <AboutPage/>
+            <ContactPage/>
+        </div>
     );
 }
 
