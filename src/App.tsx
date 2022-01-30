@@ -1,17 +1,16 @@
 import React from 'react';
-import './App.css';
+import LandingPage from "./pages/LandingPage";
+import ProjectPage from "./pages/ProjectPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
-  return (
-    <div className="App">
-        <h1 className="text-4xl font-bold">
-            Work. In. Progress.
-        </h1>
-        <h2 className="text-xl font-bold">
-            Please revisit later, cheers!
-        </h2>
-    </div>
-  );
+    return (
+        <div className="font-standard">
+            <LandingPage/>
+            <ProjectPage/>
+            <ContactPage/>
+        </div>
+    );
 }
 
 export default App;
