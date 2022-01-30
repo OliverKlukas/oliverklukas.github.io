@@ -42,7 +42,7 @@ const projects: project[] = [
 export default function ProjectPage() {
     return (
         <div>
-            <p className="text-heading pl-10">Creations.</p>
+            <p className="text-heading pl-10">Stories.</p>
             <hr className="border-black border ml-10 mr-20"/>
             <div className="grid md:grid-cols-2 gap-x-6 gap-y-12 m-20 items-center justify-items-center">
                 <img className="rounded-[62px]" src={remi} alt="Remi the Cooking Assistant"/>
