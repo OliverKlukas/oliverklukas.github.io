@@ -1,5 +1,5 @@
 # Personal Webpage
-[![Webpage](https://user-images.githubusercontent.com/39443615/146680311-f0aaf24c-9a9c-4949-aede-a836bf3da02c.png)](https://oliverklukas.github.io/)
+[![Webpage](https://user-images.githubusercontent.com/39443615/151715158-8501eddb-d148-412d-8926-4c701935fc2c.png)](https://oliverklukas.github.io/)
 
 ## Implemented
 - Landing page
