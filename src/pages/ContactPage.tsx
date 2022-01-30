@@ -4,10 +4,10 @@ import github from "../asssets/GitHubLogo.png"
 
 export default function ContactPage() {
     return(
-        <div className="flex flex-col h-screen justify-center space-y-28 items-center">
+        <div className="flex flex-col min-h-screen justify-center space-y-28 items-center">
             <div className="text-center">
-                <p className="text-heading">Let's talk.</p>
-                <p className="text-standard max-w-4xl">Some text where I outline that they can contact me on the three platforms, that I'm open to collaboration and to enjoy life! Some text where I outline that they can contact me on the three platforms, that I'm open to collaboration and to enjoy life!</p>
+                <p className="text-heading">The end.</p>
+                <p className="text-standard max-w-4xl">That's it, you've reached the end... at least for now! Do you want to collaborate or talk about an idea? Want to grab a coffee and discuss art, music and bug fixing? Then drop me a line below or follow me on GitHub. See ya!</p>
             </div>
             <div className="flex space-x-20">
                 <a href="https://github.com/OliverKlukas">

@@ -1,7 +1,6 @@
 # Personal Webpage
 [![Webpage](https://user-images.githubusercontent.com/39443615/146680311-f0aaf24c-9a9c-4949-aede-a836bf3da02c.png)](https://oliverklukas.github.io/)
 
-# Product state
 ## Implemented
 - Landing page
 - Project page
@@ -11,6 +10,11 @@
 - Loading page - card life story animation
 - About page - self-portrait, education, funny-fact-transitions, experience & CV download
 - Responsive design transition
+- Technical documentation & code cleaning
+
+## Idea parking lot
+- Custom cursor
+- Spotify recommendations
 
 # Tech stack
 1. React with TypeScript as the backbone

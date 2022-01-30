@@ -19,9 +19,9 @@ const colors = ['bg-green-5', 'bg-green-4', 'bg-green-3','bg-green-2', 'bg-green
 
 export default function ProjectDescription(project : project) {
     return (
-        <div className="flex flex-col h-screen justify-center space-y-4 w-[90%]">
-            <p className="text-subheading">{project.title}</p>
-            <p className="text-standard">{project.description}</p>
+        <div className="flex flex-col min-h-screen justify-center space-y-4 w-[90%]">
+            <p className="leading-tight text-subheading">{project.title}</p>
+            <p className="text-standard whitespace-pre-line">{project.description}</p>
             <p className="text-paragraph pt-2">Tech Stack</p>
             <div className="flex w-[97%]">
                 {project.stack.map((item, index) => (
