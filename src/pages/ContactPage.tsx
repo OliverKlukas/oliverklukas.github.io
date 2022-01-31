@@ -3,6 +3,7 @@ import {LinkedInLogo} from "../asssets/SVGs";
 import github from "../asssets/GitHubLogo.png"
 
 export default function ContactPage() {
+
     return(
         <div className="flex flex-col min-h-screen justify-center space-y-14 md:space-y-28 items-center">
             <div className="text-center">
