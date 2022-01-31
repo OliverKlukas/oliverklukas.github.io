@@ -2,18 +2,13 @@ export function ScrollLogo() {
     return (
         <svg width="78" height="75" viewBox="0 0 78 75" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_57_37)">
-                <path
-                    d="M73 33.5C73 51.4084 57.8194 66 39 66C20.1806 66 5 51.4084 5 33.5C5 15.5916 20.1806 1 39 1C57.8194 1 73 15.5916 73 33.5Z"
-                    fill="white" stroke="black" strokeWidth="2"/>
-                <path
-                    d="M40 23C40 22.4477 39.5523 22 39 22C38.4477 22 38 22.4477 38 23H40ZM38.2929 47.7071C38.6834 48.0976 39.3166 48.0976 39.7071 47.7071L46.0711 41.3431C46.4616 40.9526 46.4616 40.3195 46.0711 39.9289C45.6805 39.5384 45.0474 39.5384 44.6569 39.9289L39 45.5858L33.3431 39.9289C32.9526 39.5384 32.3195 39.5384 31.9289 39.9289C31.5384 40.3195 31.5384 40.9526 31.9289 41.3431L38.2929 47.7071ZM38 23V47H40V23H38Z"
-                    fill="black"/>
+                <path d="M73 33.5C73 51.4084 57.8194 66 39 66C20.1806 66 5 51.4084 5 33.5C5 15.5916 20.1806 1 39 1C57.8194 1 73 15.5916 73 33.5Z" fill="white" stroke="white" strokeWidth="2"/>
+                <path d="M40 23C40 22.4477 39.5523 22 39 22C38.4477 22 38 22.4477 38 23H40ZM38.2929 47.7071C38.6834 48.0976 39.3166 48.0976 39.7071 47.7071L46.0711 41.3431C46.4616 40.9526 46.4616 40.3195 46.0711 39.9289C45.6805 39.5384 45.0474 39.5384 44.6569 39.9289L39 45.5858L33.3431 39.9289C32.9526 39.5384 32.3195 39.5384 31.9289 39.9289C31.5384 40.3195 31.5384 40.9526 31.9289 41.3431L38.2929 47.7071ZM38 23V47H40V23H38Z" fill="#2F5D62"/>
             </g>
             <defs>
                 <filter id="filter0_d_57_37" x="0" y="0" width="78" height="75" filterUnits="userSpaceOnUse">
                     <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                   result="hardAlpha"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                     <feOffset dy="4"/>
                     <feGaussianBlur stdDeviation="2"/>
                     <feComposite in2="hardAlpha" operator="out"/>
@@ -23,7 +18,6 @@ export function ScrollLogo() {
                 </filter>
             </defs>
         </svg>
-
     )
 }
 
