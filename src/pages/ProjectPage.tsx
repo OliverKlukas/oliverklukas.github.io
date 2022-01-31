@@ -43,7 +43,7 @@ export default function ProjectPage() {
     return (
         <div>
             <p className="text-mobile-heading md:text-heading pl-10">Stories.</p>
-            <hr className="border-black border ml-10 mr-10 md:mr-20"/>
+            <hr className="border-black border bg-black ml-10 mr-10 md:mr-20"/>
             <div className="grid md:grid-cols-2 gap-x-6 gap-y-12 m-7 md:m-20 items-center justify-items-center">
                 <img className="rounded-[50px] md:rounded-[62px]" src={remi} alt="Remi the Cooking Assistant"/>
                 {ProjectDescription(projects[0])}
