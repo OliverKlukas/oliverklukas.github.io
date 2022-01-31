@@ -22,9 +22,13 @@ module.exports = {
     },
     fontSize: {
       'heading': '144px',
+      'mobile-heading': '72px',
       'subheading': '72px',
+      'mobile-subheading': '48px',
       'paragraph': '48px',
+      'mobile-paragraph': '32px',
       'standard': '24px',
+      'mobile-standard': '19px'
     },
     fontFamily:{
       'standard': ['Ibarra Real Nova']

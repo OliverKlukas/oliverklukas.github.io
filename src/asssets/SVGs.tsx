@@ -29,7 +29,7 @@ export function ScrollLogo() {
 
 export function LinkedInLogo(){
     return(
-        <svg width="133" height="133" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%" height="100%" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_46_598)">
                 <mask id="mask0_46_598" style={{maskType: "alpha"}} maskUnits="userSpaceOnUse" x="4" y="0" width="125" height="125">
                     <circle cx="66.5" cy="62.5" r="62.5" fill="#C4C4C4"/>

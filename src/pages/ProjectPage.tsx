@@ -33,7 +33,7 @@ const projects: project[] = [
         stack: [
             {name: "C", share: 90},
             {name: "Makefile", share: 5},
-            {name: "Pixel-Counting", share: 5}
+            {name: "Pixel counting", share: 5}
         ],
         githubLink: "https://github.com/OliverKlukas/galactic-empire-pi"
     },
@@ -42,13 +42,16 @@ const projects: project[] = [
 export default function ProjectPage() {
     return (
         <div>
-            <p className="text-heading pl-10">Stories.</p>
-            <hr className="border-black border ml-10 mr-20"/>
-            <div className="grid md:grid-cols-2 gap-x-6 gap-y-12 m-20 items-center justify-items-center">
-                <img className="rounded-[62px]" src={remi} alt="Remi the Cooking Assistant"/>
+            <p className="text-mobile-heading md:text-heading pl-10">Stories.</p>
+            <hr className="border-black border ml-10 mr-10 md:mr-20"/>
+            <div className="grid md:grid-cols-2 gap-x-6 gap-y-12 m-7 md:m-20 items-center justify-items-center">
+                <img className="rounded-[50px] md:rounded-[62px]" src={remi} alt="Remi the Cooking Assistant"/>
                 {ProjectDescription(projects[0])}
+                <video className="md:hidden" controls autoPlay muted loop>
+                    <source src={frest} type='video/mp4'/>
+                </video>
                 {ProjectDescription(projects[1])}
-                <video controls autoPlay muted loop>
+                <video className="hidden md:block" controls autoPlay muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
                 <img src={galactic} alt="Galactic Empire retro game"/>

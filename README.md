@@ -9,7 +9,6 @@
 ## In progress
 - Loading page - card life story animation
 - About page - self-portrait, education, funny-fact-transitions, experience & CV download
-- Responsive design transition
 - Technical documentation & code cleaning
 
 ## Idea parking lot
@@ -19,5 +18,5 @@
 # Tech stack
 1. React with TypeScript as the backbone
 2. Tailwind Css to make things look good
-3. GSAP & Locomotive Scroll for everything that moves
+3. GSAP for everything that moves
 4. Deployment via GitHub Pages
