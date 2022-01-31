@@ -31,7 +31,7 @@ module.exports = {
       'mobile-standard': '19px'
     },
     fontFamily:{
-      'standard': ['"Ibarra Real Nova"'],
+      'sans': ['"Ibarra Real Nova"'],
     },
     extend: {},
   },

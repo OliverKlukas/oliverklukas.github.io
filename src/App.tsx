@@ -5,7 +5,7 @@ import ContactPage from "./pages/ContactPage";
 
 function App() {
     return (
-        <div className="text-standard">
+        <div>
             <LandingPage/>
             <ProjectPage/>
             <ContactPage/>
