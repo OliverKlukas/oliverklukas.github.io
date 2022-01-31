@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8abc5101.css",
-    "main.js": "/static/js/main.09123ed2.js",
+    "main.css": "/static/css/main.29e031a2.css",
+    "main.js": "/static/js/main.f493089b.js",
     "static/media/remi.gif": "/static/media/remi.f314e999c67f8e45a034.gif",
     "static/media/frest.mp4": "/static/media/frest.729986d90caecaf3f0f9.mp4",
     "static/media/GalacticEmpire.gif": "/static/media/GalacticEmpire.1cf0892c119354c6ff27.gif",
     "index.html": "/index.html",
-    "main.8abc5101.css.map": "/static/css/main.8abc5101.css.map",
-    "main.09123ed2.js.map": "/static/js/main.09123ed2.js.map"
+    "main.29e031a2.css.map": "/static/css/main.29e031a2.css.map",
+    "main.f493089b.js.map": "/static/js/main.f493089b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8abc5101.css",
-    "static/js/main.09123ed2.js"
+    "static/css/main.29e031a2.css",
+    "static/js/main.f493089b.js"
   ]
 }
