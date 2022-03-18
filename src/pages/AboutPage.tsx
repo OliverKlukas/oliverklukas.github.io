@@ -50,6 +50,9 @@ export default function AboutPage() {
                 </div>
                 <div className="w-screen" ref={(e) => createPanelsRefs(e, 2)}>
                     <p className="text-mobile-subheading md:text-subheading">Experience.</p>
+                    <div>
+
+                    </div>
                     <p className="text-mobile-subheading md:text-subheading">Education.</p>
                 </div>
             </div>
