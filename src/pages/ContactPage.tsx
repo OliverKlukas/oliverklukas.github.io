@@ -12,10 +12,10 @@ export default function ContactPage() {
             </div>
             <div className="flex space-x-9 md:space-x-20">
                 <a href="https://github.com/OliverKlukas">
-                    <img className="h-24 md:h-32" src={github}/>
+                    <img className="h-24 md:h-32 hover:opacity-80" src={github}/>
                 </a>
                 <a href="https://www.linkedin.com/in/oliver-klukas/">
-                    <div className="h-24 md:h-32">
+                    <div className="h-24 md:h-32 hover:opacity-80">
                         <LinkedInLogo/>
                     </div>
                 </a>

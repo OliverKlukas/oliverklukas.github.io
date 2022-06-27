@@ -1,5 +1,6 @@
 import React from 'react';
-import {LinkButton} from "./Button";
+import {LinkButton} from "./LinkButton";
+import {DownloadButton} from "./DownloadButton";
 
 declare global {
     type technology = {
@@ -11,7 +12,8 @@ declare global {
         description: string,
         stack: technology[],
         githubLink?: string,
-        liveLink?: string
+        liveLink?: string,
+        pitchLink?: string
     }
 }
 
@@ -40,6 +42,7 @@ export default function ProjectDescription(project : project, reference: React.L
             <div className="flex pt-4 md:pt-7">
                 {project.githubLink != null && LinkButton("GitHub", project.githubLink)}
                 {project.liveLink != null && LinkButton("Live Version", project.liveLink)}
+                {project.pitchLink != null && DownloadButton("Pitch", project.pitchLink)}
             </div>
         </div>
     );
