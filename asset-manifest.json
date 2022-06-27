@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8a304c9.css",
-    "main.js": "/static/js/main.77513ca9.js",
+    "main.css": "/static/css/main.f05aaa37.css",
+    "main.js": "/static/js/main.e57926f9.js",
     "static/media/remi.gif": "/static/media/remi.f314e999c67f8e45a034.gif",
     "static/media/frest.mp4": "/static/media/frest.729986d90caecaf3f0f9.mp4",
+    "static/media/greenewal-full-product.gif": "/static/media/greenewal-full-product.5ae1442a7bd5de02a3fe.gif",
     "static/media/GalacticEmpire.gif": "/static/media/GalacticEmpire.1cf0892c119354c6ff27.gif",
     "index.html": "/index.html",
-    "main.c8a304c9.css.map": "/static/css/main.c8a304c9.css.map",
-    "main.77513ca9.js.map": "/static/js/main.77513ca9.js.map"
+    "main.f05aaa37.css.map": "/static/css/main.f05aaa37.css.map",
+    "main.e57926f9.js.map": "/static/js/main.e57926f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8a304c9.css",
-    "static/js/main.77513ca9.js"
+    "static/css/main.f05aaa37.css",
+    "static/js/main.e57926f9.js"
   ]
 }
