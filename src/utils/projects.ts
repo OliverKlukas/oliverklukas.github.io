@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const projects: project[] = [
     {
         title: "Remi the cooking assistant",
