@@ -1,7 +1,7 @@
 import React from 'react';
-import LandingPage from "./pages/LandingPage";
-import ProjectPage from "./pages/ProjectPage";
-import ContactPage from "./pages/ContactPage";
+import LandingView from "./views/LandingView";
+import ProjectView from "./views/ProjectView";
+import ContactView from "./views/ContactView";
 
 /**
  * Constructs hierarchy of application.
@@ -10,9 +10,9 @@ import ContactPage from "./pages/ContactPage";
 function App() {
     return (
         <div>
-            <LandingPage/>
-            <ProjectPage/>
-            <ContactPage/>
+            <LandingView/>
+            <ProjectView/>
+            <ContactView/>
         </div>
     );
 }

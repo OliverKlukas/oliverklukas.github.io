@@ -2,7 +2,7 @@ import React from 'react';
 import {LinkedInLogo} from "../asssets/SVGs";
 import github from "../asssets/GitHubLogo.png"
 
-export default function ContactPage() {
+export default function ContactView() {
 
     return(
         <div className="flex flex-col min-h-screen justify-center space-y-14 lg:space-y-28 items-center">

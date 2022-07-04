@@ -19,7 +19,7 @@ declare global {
 
 const colors = ['bg-green-5', 'bg-green-4', 'bg-green-3','bg-green-2', 'bg-green-1']
 
-export default function ProjectDescription(project : project, reference: React.LegacyRef<HTMLDivElement> | undefined) {
+export default function ProjectDescription(project : project, reference: React.LegacyRef<HTMLDivElement>) {
     return (
         <div className="flex flex-col lg:min-h-screen justify-center space-y-4 lg:w-[90%]" ref={reference}>
             <p className="leading-tight text-mobile-subheading lg:text-subheading">{project.title}</p>

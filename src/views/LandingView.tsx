@@ -1,7 +1,7 @@
 import React from 'react';
 import {ScrollLogo} from "../asssets/SVGs";
 
-export default function LandingPage() {
+export default function LandingView() {
     return(
         <div className="flex flex-col min-h-screen bg-green-4 justify-evenly items-center">
             <div/>
