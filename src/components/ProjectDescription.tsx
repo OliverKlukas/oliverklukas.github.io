@@ -19,6 +19,13 @@ declare global {
 
 const colors = ['bg-green-5', 'bg-green-4', 'bg-green-3','bg-green-2', 'bg-green-1']
 
+/**
+ * Describes a project, provides a technology stack graph and links to more information.
+ *
+ * @param {project} project - Outlines title, description, stack and possible links to project.
+ * @param {React.LegacyRef<HTMLDivElement>} reference - References the object in order to load GSAP animation.
+ * @return {div}
+ */
 export default function ProjectDescription(project : project, reference: React.LegacyRef<HTMLDivElement>) {
     return (
         <div className="flex flex-col lg:min-h-screen justify-center space-y-4 lg:w-[90%]" ref={reference}>

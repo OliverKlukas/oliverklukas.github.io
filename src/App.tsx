@@ -5,7 +5,8 @@ import ContactView from "./views/ContactView";
 
 /**
  * Constructs hierarchy of application.
- * @constructor
+ *
+ * @return {div}
  */
 function App() {
     return (

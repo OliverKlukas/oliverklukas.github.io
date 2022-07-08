@@ -11,8 +11,9 @@ import {projects} from "../utils/projects";
 gsap.registerPlugin(ScrollTrigger);
 
 /**
+ * Lists projects including individual project descriptions and media (gifs, videos).
  *
- * @constructor
+ * @returns {div}
  */
 export default function ProjectView() {
 
@@ -52,7 +53,7 @@ export default function ProjectView() {
             <div className="grid lg:grid-cols-2 gap-x-6 gap-y-12 m-7 lg:m-20 items-center justify-items-center">
                 <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={remi}
                      alt="Remi the Cooking Assistant"/>
-                <ProjectDescription project={projects[0]} reference={addToRefs}/>
+                {ProjectDescription(projects[0], addToRefs)}
                 <video className="lg:hidden" controls autoPlay muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
