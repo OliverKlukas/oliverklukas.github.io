@@ -3,7 +3,9 @@
 Continuously evolving collection of cool projects I've done in the past, some random anecdotes and a playground to try out new ideas live on the web. :surfer:
 
 ## Check it out
-[![portfolio](https://user-images.githubusercontent.com/39443615/178351660-0a9f2769-39b6-4ff5-a5ec-97486a5f860f.gif)](https://oliverklukas.github.io/)
+[![portfolio](https://user-images.githubusercontent.com/39443615/178351885-8ccf4668-93d7-4531-8870-75efc4277f68.gif)](https://oliverklukas.github.io/)
+
+
 
 ## Tech stack
 1. React with TypeScript as the backbone
