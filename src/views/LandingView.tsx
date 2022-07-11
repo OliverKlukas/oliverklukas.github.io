@@ -1,6 +1,11 @@
 import React from 'react';
 import {ScrollLogo} from "../asssets/SVGs";
 
+/**
+ * Landing View component that introduces portfolio page.
+ *
+ * @constructor
+ */
 export default function LandingView() {
     return(
         <div className="flex flex-col min-h-screen bg-green-4 justify-evenly items-center">

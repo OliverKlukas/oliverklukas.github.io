@@ -4,9 +4,9 @@ import ProjectView from "./views/ProjectView";
 import ContactView from "./views/ContactView";
 
 /**
- * Constructs hierarchy of application.
- *
- * @return {div}
+ * Constructs hierarchy of portfolio application.
+ * 
+ * @constructor
  */
 function App() {
     return (

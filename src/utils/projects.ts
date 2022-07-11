@@ -1,3 +1,6 @@
+/**
+ * Information about achieved projects.
+ */
 export const projects: project[] = [
     {
         title: "Remi the cooking assistant",

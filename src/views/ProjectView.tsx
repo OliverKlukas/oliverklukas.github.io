@@ -8,15 +8,16 @@ import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {projects} from "../utils/projects";
 
+// Add gsap scrolling animations.
 gsap.registerPlugin(ScrollTrigger);
 
 /**
  * Lists projects including individual project descriptions and media (gifs, videos).
  *
- * @returns {div}
+ * @return {div}
  */
 export default function ProjectView() {
-
+    // Define gsap scrolling reference.
     const revealRefs = useRef([]);
     revealRefs.current = [];
 
@@ -38,6 +39,7 @@ export default function ProjectView() {
         });
     }, []);
 
+    // Adds new elements to gsap animation reference.
     const addToRefs = (elem: any) => {
         // @ts-ignore
         if (elem && !revealRefs.current.includes(elem)) {
@@ -53,20 +55,20 @@ export default function ProjectView() {
             <div className="grid lg:grid-cols-2 gap-x-6 gap-y-12 m-7 lg:m-20 items-center justify-items-center">
                 <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={remi}
                      alt="Remi the Cooking Assistant"/>
-                {ProjectDescription(projects[0], addToRefs)}
+                <ProjectDescription project={projects[0]} reference={addToRefs}/>
                 <video className="lg:hidden" controls autoPlay muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
-                {ProjectDescription(projects[1], addToRefs)}
+                <ProjectDescription project={projects[1]} reference={addToRefs}/>
                 <video ref={addToRefs} className="hidden lg:block object-cover" style={{width: "90%"}} controls autoPlay
                        muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
                 <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={greenewal} alt="Greenewal"/>
-                {ProjectDescription(projects[2], addToRefs)}
+                <ProjectDescription project={projects[2]} reference={addToRefs}/>
                 <img ref={addToRefs} className="lg:hidden" style={{width: "90%"}} src={galactic}
                      alt="Galactic Empire retro game"/>
-                {ProjectDescription(projects[3], addToRefs)}
+                <ProjectDescription project={projects[3]} reference={addToRefs}/>
                 <img ref={addToRefs} className="hidden lg:block object-cover" style={{width: "90%"}} src={galactic}
                      alt="Galactic Empire retro game"/>
             </div>

@@ -2,22 +2,12 @@ import React from 'react';
 import {LinkButton} from "./LinkButton";
 import {DownloadButton} from "./DownloadButton";
 
-declare global {
-    type technology = {
-        name: string;
-        share: number;
-    }
-    type project = {
-        title: string,
-        description: string,
-        stack: technology[],
-        githubLink?: string,
-        liveLink?: string,
-        pitchLink?: string
-    }
-}
-
 const colors = ['bg-green-5', 'bg-green-4', 'bg-green-3','bg-green-2', 'bg-green-1']
+
+type propsType = {
+    project: project,
+    reference: React.LegacyRef<HTMLDivElement>,
+}
 
 /**
  * Describes a project, provides a technology stack graph and links to more information.
@@ -26,7 +16,7 @@ const colors = ['bg-green-5', 'bg-green-4', 'bg-green-3','bg-green-2', 'bg-green
  * @param {React.LegacyRef<HTMLDivElement>} reference - References the object in order to load GSAP animation.
  * @return {div}
  */
-export default function ProjectDescription(project : project, reference: React.LegacyRef<HTMLDivElement>) {
+export default function ProjectDescription({project, reference} : propsType) {
     return (
         <div className="flex flex-col lg:min-h-screen justify-center space-y-4 lg:w-[90%]" ref={reference}>
             <p className="leading-tight text-mobile-subheading lg:text-subheading">{project.title}</p>
@@ -34,12 +24,12 @@ export default function ProjectDescription(project : project, reference: React.L
             <p className="text-mobile-paragraph lg:text-paragraph pt-2">Tech Stack</p>
             <div className="flex w-[97%]">
                 {project.stack.map((item, index) => (
-                    <div style={{width: `${item.share}%`}} className={`first:rounded-l-lg last:rounded-r-lg h-4 ${colors[index]}`}/>
+                    <div key={index} style={{width: `${item.share}%`}} className={`first:rounded-l-lg last:rounded-r-lg h-4 ${colors[index]}`}/>
                 ))}
             </div>
             <div className="grid grid-cols-2">
                 {project.stack.map((item, index) => (
-                    <div className="flex items-center space-x-2">
+                    <div key={index} className="flex items-center space-x-2">
                         <div className={`w-4 h-4 rounded-full ${colors[index]}`}/>
                         <div className="text-mobile-standard lg:text-standard">{item.name}</div>
                         <div className="text-mobile-standard lg:text-standard text-grey">{" " + item.share + "%"}</div>
@@ -47,9 +37,9 @@ export default function ProjectDescription(project : project, reference: React.L
                 ))}
             </div>
             <div className="flex pt-4 lg:pt-7">
-                {project.githubLink != null && LinkButton("GitHub", project.githubLink)}
-                {project.liveLink != null && LinkButton("Live Version", project.liveLink)}
-                {project.pitchLink != null && DownloadButton("Pitch", project.pitchLink)}
+                {project.githubLink != null && <LinkButton title={"GitHub"} link={project.githubLink}/>}
+                {project.liveLink != null && <LinkButton title={"Live Version"} link={project.liveLink}/>}
+                {project.pitchLink != null && <DownloadButton title={"Download"} link={project.pitchLink}/>}
             </div>
         </div>
     );
