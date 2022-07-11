@@ -1,22 +1,28 @@
-# Personal Portfolio Webpage
-[![Webpage](https://user-images.githubusercontent.com/39443615/151715158-8501eddb-d148-412d-8926-4c701935fc2c.png)](https://oliverklukas.github.io/)
+# My Portfolio
 
-## Implemented
-- Landing page
-- Project page
-- Contact page
+## Check it out
+[![Portfolio Link](https://user-images.githubusercontent.com/39443615/178343499-e5439893-49f0-4a21-ae4e-efcc89651fed.png)]((https://oliverklukas.github.io/))
 
-## In progress
-- Loading page - card life story animation
-- About page - self-portrait, education, funny-fact-transitions, experience & CV download
-- Technical documentation & code cleaning
-
-## Idea parking lot
-- Custom cursor
-- Spotify recommendations
-
-# Tech stack
+## Tech stack
 1. React with TypeScript as the backbone
-2. Tailwind Css to make things look good
+2. Tailwind CSS to make things look good
 3. GSAP for everything that moves
 4. Deployment via GitHub Pages
+
+# Technical documentation
+
+## Prerequisites
+- React.js: ^17.x
+- Node.js: ^16.x
+
+## Run commands
+```shell
+# Run at http://localhost:3000/
+npm install
+npm start
+```
+
+## Deploy commands
+```shell
+npm run deploy
+```
