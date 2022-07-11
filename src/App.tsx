@@ -2,6 +2,7 @@ import React from 'react';
 import LandingView from "./views/LandingView";
 import ProjectView from "./views/ProjectView";
 import ContactView from "./views/ContactView";
+import LoadingView from "./views/LoadingView";
 
 /**
  * Constructs hierarchy of portfolio application.
@@ -11,6 +12,7 @@ import ContactView from "./views/ContactView";
 function App() {
     return (
         <div>
+            <LoadingView/>
             <LandingView/>
             <ProjectView/>
             <ContactView/>
