@@ -1,9 +1,9 @@
 # My Portfolio
 
-Continuously evolving collection of cool projects I've done in the past, some random anecdotes and a playground to try out new ideas live on the web :surfer:
+Continuously evolving collection of cool projects I've done in the past, some random anecdotes and a playground to try out new ideas live on the web. :surfer:
 
 ## Check it out
-[![portfolio](https://user-images.githubusercontent.com/39443615/178348811-67fd3c37-051b-44a1-8d59-dbf2ec0f717b.gif)](https://oliverklukas.github.io/)
+[![portfolio](https://user-images.githubusercontent.com/39443615/178349061-d1f95273-d675-4b39-8db3-6cbe4d8d03cc.gif)](https://oliverklukas.github.io/)
 
 ## Tech stack
 1. React with TypeScript as the backbone
