@@ -10,7 +10,6 @@ import {cards} from "../utils/cards";
  * @constructor
  */
 export default function LoadingView() {
-
     const el = useRef(null);
     const q = gsap.utils.selector(el);
 
@@ -19,7 +18,7 @@ export default function LoadingView() {
             x: "40vw",
             y: "25vh",
             stagger: 0.33,
-            repeat: -1,
+            repeat: 1,
             repeatDelay: 1,
             yoyo: true
         });
