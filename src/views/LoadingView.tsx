@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import YearCard from "../components/YearCard";
 import {getRandomInt} from "../utils/random";
 import {gsap} from "gsap";
+import {cards} from "../utils/cards";
 
 /**
  * Page loading animation that throws cards of yearly life events.
@@ -10,46 +11,24 @@ import {gsap} from "gsap";
  */
 export default function LoadingView() {
 
-    // Create a GSAP timeline to animate cards arrival.
-    const tl = gsap.timeline({repeat: 2, repeatDelay: 1});
-    tl.to("card", {x: 100, duration: 1});
-    tl.to("card", {y: 50, duration: 1});
+    const el = useRef(null);
+    const q = gsap.utils.selector(el);
 
-    tl.repeat();
+    useEffect(() => {
+        gsap.to(q(".card"), {
+            x: 1000,
+            stagger: 0.33,
+            repeat: -1,
+            repeatDelay: 1,
+            yoyo: true
+        });
+    }, []);
 
     const rotation : string[] = ['rotate-2', 'rotate-6', 'rotate-12', 'rotate-0', '-rotate-2', '-rotate-6', '-rotate-12'];
 
-    const lifeCards = [
-        {year: "1998", anecdote: "the journey begins"},
-        {year: "1999", anecdote: "the journey begins"},
-        {year: "2000", anecdote: "the journey begins"},
-        {year: "2001", anecdote: "the journey begins"},
-        {year: "2002", anecdote: "the journey begins"},
-        {year: "2003", anecdote: "the journey begins"},
-        {year: "2004", anecdote: "the journey begins"},
-        {year: "2005", anecdote: "the journey begins"},
-        {year: "2006", anecdote: "the journey begins"},
-        {year: "2007", anecdote: "the journey begins"},
-        {year: "2008", anecdote: "the journey begins"},
-        {year: "2009", anecdote: "the journey begins"},
-        {year: "2010", anecdote: "the journey begins"},
-        {year: "2011", anecdote: "the journey begins"},
-        {year: "2012", anecdote: "the journey begins"},
-        {year: "2013", anecdote: "the journey begins"},
-        {year: "2014", anecdote: "the journey begins"},
-        {year: "2015", anecdote: "the journey begins"},
-        {year: "2016", anecdote: "the journey begins"},
-        {year: "2017", anecdote: "the journey begins"},
-        {year: "2018", anecdote: "the journey begins"},
-        {year: "2019", anecdote: "the journey begins"},
-        {year: "2020", anecdote: "the journey begins"},
-        {year: "2021", anecdote: "the journey begins"},
-        {year: "2022", anecdote: "the journey begins"},
-    ];
-
     return (
-        <div>
-            {lifeCards.map((card, index) => (
+        <div className={"h-screen"} ref={el}>
+            {cards.map((card, index) => (
                 <div key={index} className={"card"}>
                     <YearCard
                         rotation={rotation[getRandomInt(7)]} year={card.year} anecdote={card.anecdote}/>
