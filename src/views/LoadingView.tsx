@@ -16,7 +16,8 @@ export default function LoadingView() {
 
     useEffect(() => {
         gsap.to(q(".card"), {
-            x: 1000,
+            x: "40vw",
+            y: "25vh",
             stagger: 0.33,
             repeat: -1,
             repeatDelay: 1,
