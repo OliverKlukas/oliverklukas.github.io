@@ -1,6 +1,7 @@
 import React from 'react';
 import YearCard from "../components/YearCard";
 import {getRandomInt} from "../utils/random";
+import {gsap} from "gsap";
 
 /**
  * Page loading animation that throws cards of yearly life events.
@@ -8,6 +9,13 @@ import {getRandomInt} from "../utils/random";
  * @constructor
  */
 export default function LoadingView() {
+
+    // Create a GSAP timeline to animate cards arrival.
+    const tl = gsap.timeline({repeat: 2, repeatDelay: 1});
+    tl.to("card", {x: 100, duration: 1});
+    tl.to("card", {y: 50, duration: 1});
+
+    tl.repeat();
 
     const rotation : string[] = ['rotate-2', 'rotate-6', 'rotate-12', 'rotate-0', '-rotate-2', '-rotate-6', '-rotate-12'];
 
@@ -41,7 +49,12 @@ export default function LoadingView() {
 
     return (
         <div>
-            {lifeCards.map((card, index) => <YearCard key={index} rotation={rotation[getRandomInt(7)]} year={card.year} anecdote={card.anecdote}/>)}
+            {lifeCards.map((card, index) => (
+                <div key={index} className={"card"}>
+                    <YearCard
+                        rotation={rotation[getRandomInt(7)]} year={card.year} anecdote={card.anecdote}/>
+                </div>
+            ))}
         </div>
     );
 }
