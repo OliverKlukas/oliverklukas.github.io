@@ -10,6 +10,11 @@ import LoadingView from "./views/LoadingView";
  * @constructor
  */
 function App() {
+    // Ensure that reloads scroll to top of screen to re-trigger LoadingView.
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <div>
             <LoadingView/>
