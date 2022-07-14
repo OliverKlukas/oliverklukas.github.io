@@ -1,13 +1,13 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 import YearCard from "../components/YearCard";
 import {gsap} from "gsap";
 import {cards} from "../utils/cards";
-import {getRandomInt} from "../utils/random";
 
+// eslint-disable-next-line valid-jsdoc
 /**
  * Page loading animation that throws cards of yearly life events.
  *
- * @constructor
+ * @return div
  */
 export default function LoadingView() {
     // Remove loading view via hook after animation.
@@ -19,32 +19,41 @@ export default function LoadingView() {
     // Gsap reference and class selector.
     const el = useRef(null);
     const q = gsap.utils.selector(el);
-
-    // Exit loading view after additional delay.
-    const exitLoadingView = () => {
-        setTimeout(() => setActive(false), 3000);
-    }
+    const tl = useRef();
 
     // Trigger gsap animation on opening screen.
-    useEffect(() => {
-        gsap.to(q(".card"), {
+    useLayoutEffect(() => {
+        // @ts-ignore
+        tl.current = gsap.timeline();
+        // @ts-ignore
+        tl.current.add(gsap.set(q(".card"),{
+            x: "random(-30, 130)" + "vw",
+            y: "random([-100, 150])" + "vh",
+        }));
+        // @ts-ignore
+        tl.current.add(gsap.to(q(".card"), {
             x: "40vw",
             y: "25vh",
-            opacity: 1,
             stagger: {
-                amount: 10,
+                amount: 8,
                 ease: "power4.out"
             },
-            onComplete: exitLoadingView,
-        });
+        }));
+        // @ts-ignore
+        tl.current.add(gsap.to(q(".card"), {
+            x: "random(-200, 200)" + "vw",
+            y: "random(-200, 200)" + "vh",
+            duration: 2,
+            opacity: 0,
+            onComplete: () => setActive(false),
+        }), "+=2");
     });
 
     return (
         active ? <div className={"h-screen"} ref={el}>
             {cards.map((card, index) => (
-                <div key={index} className={"card"} style={{opacity: 0}}>
-                    <YearCard
-                        rotation={getRandomInt(7)} year={card.year} anecdote={card.anecdote}/>
+                <div key={index} className={"card"}>
+                    <YearCard year={card.year} anecdote={card.anecdote}/>
                 </div>
             ))}
         </div> : null
