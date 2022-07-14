@@ -3,11 +3,10 @@ import YearCard from "../components/YearCard";
 import {gsap} from "gsap";
 import {cards} from "../utils/cards";
 
-// eslint-disable-next-line valid-jsdoc
 /**
  * Page loading animation that throws cards of yearly life events.
  *
- * @return div
+ * @constructor
  */
 export default function LoadingView() {
     // Remove loading view via hook after animation.
@@ -19,18 +18,16 @@ export default function LoadingView() {
     // Gsap reference and class selector.
     const el = useRef(null);
     const q = gsap.utils.selector(el);
-    const tl = useRef();
+    const tl = useRef<gsap.core.Timeline>(null);
 
     // Trigger gsap animation on opening screen.
     useLayoutEffect(() => {
         // @ts-ignore
         tl.current = gsap.timeline();
-        // @ts-ignore
         tl.current.add(gsap.set(q(".card"),{
             x: "random(-30, 130)" + "vw",
             y: "random([-100, 150])" + "vh",
         }));
-        // @ts-ignore
         tl.current.add(gsap.to(q(".card"), {
             x: "40vw",
             y: "25vh",
@@ -39,7 +36,6 @@ export default function LoadingView() {
                 ease: "power4.out"
             },
         }));
-        // @ts-ignore
         tl.current.add(gsap.to(q(".card"), {
             x: "random(-200, 200)" + "vw",
             y: "random(-200, 200)" + "vh",
