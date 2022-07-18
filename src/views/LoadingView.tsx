@@ -25,7 +25,7 @@ export default function LoadingView() {
         // @ts-ignore
         tl.current = gsap.timeline();
         tl.current.add(gsap.set(q(".card"),{
-            x: "random(-30, 130)" + "vw",
+            x: "random(0, 100)" + "vw",
             y: "random([-100, 150])" + "vh",
         }));
         tl.current.add(gsap.to(q(".card"), {
@@ -40,9 +40,11 @@ export default function LoadingView() {
             x: "random(-200, 200)" + "vw",
             y: "random(-200, 200)" + "vh",
             duration: 2,
+        }), "+=2");
+        tl.current.add(gsap.to(q(".card"),{
             opacity: 0,
             onComplete: () => setActive(false),
-        }), "+=2");
+        }));
     });
 
     return (
