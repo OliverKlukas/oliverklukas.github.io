@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import LandingView from "./views/LandingView";
 import ProjectView from "./views/ProjectView";
 import ContactView from "./views/ContactView";
 import LoadingView from "./views/LoadingView";
+import { gsap } from "gsap";
 
 /**
  * Constructs hierarchy of portfolio application.
@@ -10,6 +11,8 @@ import LoadingView from "./views/LoadingView";
  * @constructor
  */
 function App() {
+    // Define global timeline.
+    const [tl] = useState(() => gsap.timeline());
 
     // Ensure that reloads scroll to top of screen to re-trigger LoadingView.
     window.onbeforeunload = function () {
@@ -18,10 +21,10 @@ function App() {
 
     return (
         <div>
-            <LoadingView/>
-            <LandingView/>
-            <ProjectView/>
-            <ContactView/>
+            <LoadingView timeline={tl} index={0}/>
+            <LandingView timeline={tl} index={1}/>
+            <ProjectView />
+            <ContactView />
         </div>
     );
 }

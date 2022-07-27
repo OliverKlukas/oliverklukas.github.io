@@ -7,15 +7,15 @@ import { gsap } from "gsap";
  *
  * @constructor
  */
-export default function LandingView() {
+export default function LandingView({timeline, index} : {timeline: gsap.core.Timeline, index: number}) {
     const viewRef = useRef<HTMLDivElement>(null);
 
     // Fade landing view in on load.
     useLayoutEffect(() => {
-        gsap.to(viewRef.current, {
+        timeline.to(viewRef.current, {
             rotation: "+=360"
-        })
-    })
+        }, index * 0.1)
+    }, [timeline]);
 
     return(
         <div className="flex flex-col min-h-screen bg-green-4 justify-evenly items-center" ref={viewRef}>

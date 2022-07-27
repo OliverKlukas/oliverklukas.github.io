@@ -8,7 +8,7 @@ import {cards} from "../utils/cards";
  *
  * @constructor
  */
-export default function LoadingView() {
+export default function LoadingView({timeline, index} : {timeline: gsap.core.Timeline, index: number}) {
     // Remove loading view via hook after animation.
     const [active, setActive] = useState(true);
 
@@ -18,17 +18,15 @@ export default function LoadingView() {
     // Gsap reference and class selector.
     const el = useRef(null);
     const q = gsap.utils.selector(el);
-    const tl = useRef<gsap.core.Timeline>(null);
 
     // Trigger gsap animation on opening screen.
     useLayoutEffect(() => {
         // @ts-ignore
-        tl.current = gsap.timeline();
-        tl.current.add(gsap.set(q(".card"),{
+        timeline.add(gsap.set(q(".card"),{
             x: "random(0, 100)" + "vw",
             y: "random([-100, 150])" + "vh",
-        }));
-        tl.current.add(gsap.to(q(".card"), {
+        }), );
+        timeline.add(gsap.to(q(".card"), {
             x: "40vw",
             y: "25vh",
             stagger: {
@@ -36,12 +34,12 @@ export default function LoadingView() {
                 ease: "power4.out"
             },
         }));
-        tl.current.add(gsap.to(q(".card"), {
+        timeline.add(gsap.to(q(".card"), {
             x: "random(-200, 200)" + "vw",
             y: "random(-200, 200)" + "vh",
             duration: 2,
         }), "+=2");
-        tl.current.add(gsap.to(q(".card"),{
+        timeline.add(gsap.to(q(".card"),{
             opacity: 0,
             onComplete: () => setActive(false),
         }));
