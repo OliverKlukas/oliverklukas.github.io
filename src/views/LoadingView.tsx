@@ -46,11 +46,9 @@ export default function LoadingView({timeline} : {timeline: gsap.core.Timeline})
             x: "random(-200, 200)" + "vw",
             y: "random(-200, 200)" + "vh",
             duration: 2,
-        }, "+=2");
-        timeline.to(q(".card"),{
             opacity: 0,
             onComplete: () => setActive(false),
-        });
+        }, "+=2");
     });
 
     return (
