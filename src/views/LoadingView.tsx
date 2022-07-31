@@ -38,7 +38,7 @@ export default function LoadingView({timeline} : {timeline: gsap.core.Timeline})
             y: "25vh",
             opacity: 1,
             stagger: {
-                amount: 8,
+                amount: 1, // TODO
                 ease: "power4.out"
             },
         });

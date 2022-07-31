@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import LandingView from "./views/LandingView";
 import ProjectView from "./views/ProjectView";
 import ContactView from "./views/ContactView";
-import LoadingView from "./views/LoadingView";
-import { gsap } from "gsap";
+import {gsap} from "gsap";
 
 /**
  * Constructs hierarchy of portfolio application.
@@ -21,7 +20,6 @@ function App() {
 
     return (
         <div>
-            <LoadingView timeline={tl}/>
             <LandingView />
             <ProjectView timeline={tl}/>
             <ContactView />
