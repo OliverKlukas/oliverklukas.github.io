@@ -8,12 +8,11 @@ const colors = ['bg-green-5', 'bg-green-4', 'bg-green-3','bg-green-2', 'bg-green
  * Describes a project, provides a technology stack graph and links to more information.
  *
  * @param {project} project - Outlines title, description, stack and possible links to project.
- * @param {React.LegacyRef<HTMLDivElement>} reference - References the object in order to load GSAP animation.
  * @return {div}
  */
-export default function ProjectDescription({project, reference}: {project : project, reference : React.LegacyRef<HTMLDivElement>}) {
+export default function ProjectDescription({project}: {project : project}) {
     return (
-        <div className="flex flex-col lg:min-h-screen justify-center space-y-4 lg:w-[90%]" ref={reference}>
+        <div className="flex flex-col lg:min-h-screen justify-center space-y-4 lg:w-[90%]">
             <p className="leading-tight text-mobile-subheading lg:text-subheading">{project.title}</p>
             <p className="text-mobile-standard lg:text-standard whitespace-pre-line">{project.description}</p>
             <p className="text-mobile-paragraph lg:text-paragraph pt-2">Tech Stack</p>

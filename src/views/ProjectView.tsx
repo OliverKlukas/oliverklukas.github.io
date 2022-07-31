@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import remi from '../asssets/remi.gif';
 import greenewal from '../asssets/greenewal-full-product.gif';
 import galactic from '../asssets/GalacticEmpire.gif';
@@ -16,60 +16,30 @@ gsap.registerPlugin(ScrollTrigger);
  *
  * @return {div}
  */
-export default function ProjectView() {
-    // Define gsap scrolling reference.
-    const revealRefs = useRef([]);
-    revealRefs.current = [];
-
-    useEffect(() => {
-        revealRefs.current.forEach((el, index) => {
-            gsap.fromTo(el, {
-                autoAlpha: 0
-            }, {
-                duration: 1,
-                autoAlpha: 1,
-                ease: 'none',
-                scrollTrigger: {
-                    id: `section-${index + 1}`,
-                    trigger: el,
-                    start: 'top center+=100',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-        });
-    }, []);
-
-    // Adds new elements to gsap animation reference.
-    const addToRefs = (elem: any) => {
-        // @ts-ignore
-        if (elem && !revealRefs.current.includes(elem)) {
-            // @ts-ignore
-            revealRefs.current.push(elem);
-        }
-    };
+export default function ProjectView({timeline} : {timeline: gsap.core.Timeline}) {
 
     return (
         <div>
-            <p ref={addToRefs} className="text-mobile-heading lg:text-heading pl-10">Stories.</p>
-            <hr ref={addToRefs} className="border-black border bg-black ml-10 mr-10 lg:mr-20"/>
+            <p  className="text-mobile-heading lg:text-heading pl-10">Stories.</p>
+            <hr  className="border-black border bg-black ml-10 mr-10 lg:mr-20"/>
             <div className="grid lg:grid-cols-2 gap-x-6 gap-y-12 m-7 lg:m-20 items-center justify-items-center">
-                <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={remi}
+                <img  className="rounded-[50px] lg:rounded-[62px]" src={remi}
                      alt="Remi the Cooking Assistant"/>
-                <ProjectDescription project={projects[0]} reference={addToRefs}/>
+                <ProjectDescription project={projects[0]} />
                 <video className="lg:hidden" controls autoPlay muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
-                <ProjectDescription project={projects[1]} reference={addToRefs}/>
-                <video ref={addToRefs} className="hidden lg:block object-cover" style={{width: "90%"}} controls autoPlay
+                <ProjectDescription project={projects[1]} />
+                <video  className="hidden lg:block object-cover" style={{width: "90%"}} controls autoPlay
                        muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
-                <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={greenewal} alt="Greenewal"/>
-                <ProjectDescription project={projects[2]} reference={addToRefs}/>
-                <img ref={addToRefs} className="lg:hidden" style={{width: "90%"}} src={galactic}
+                <img  className="rounded-[50px] lg:rounded-[62px]" src={greenewal} alt="Greenewal"/>
+                <ProjectDescription project={projects[2]} />
+                <img  className="lg:hidden" style={{width: "90%"}} src={galactic}
                      alt="Galactic Empire retro game"/>
-                <ProjectDescription project={projects[3]} reference={addToRefs}/>
-                <img ref={addToRefs} className="hidden lg:block object-cover" style={{width: "90%"}} src={galactic}
+                <ProjectDescription project={projects[3]} />
+                <img  className="hidden lg:block object-cover" style={{width: "90%"}} src={galactic}
                      alt="Galactic Empire retro game"/>
             </div>
         </div>

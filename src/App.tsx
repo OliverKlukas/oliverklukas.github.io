@@ -21,9 +21,9 @@ function App() {
 
     return (
         <div>
-            <LoadingView timeline={tl} index={0}/>
-            <LandingView timeline={tl} index={1}/>
-            <ProjectView />
+            <LoadingView timeline={tl}/>
+            <LandingView />
+            <ProjectView timeline={tl}/>
             <ContactView />
         </div>
     );

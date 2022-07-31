@@ -8,7 +8,7 @@ import {cards} from "../utils/cards";
  *
  * @constructor
  */
-export default function LoadingView({timeline, index} : {timeline: gsap.core.Timeline, index: number}) {
+export default function LoadingView({timeline} : {timeline: gsap.core.Timeline}) {
     // Remove loading view via hook after animation.
     const [active, setActive] = useState(true);
 
@@ -25,7 +25,7 @@ export default function LoadingView({timeline, index} : {timeline: gsap.core.Tim
         timeline.add(gsap.set(q(".card"),{
             x: "random(0, 100)" + "vw",
             y: "random([-100, 150])" + "vh",
-        }), );
+        }));
         timeline.add(gsap.to(q(".card"), {
             x: "40vw",
             y: "25vh",
