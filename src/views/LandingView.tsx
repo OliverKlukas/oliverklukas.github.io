@@ -22,19 +22,19 @@ export default function LandingView() {
         tl.to(".text", {text: {value: "Hi there!"}, duration: 1.5, delay: 2,  repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
         tl.to(".text", {text: {value: "I&apos;m olli."}, duration: 1.5, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
         tl.to(".text", {text: {value: "23 years old."}, duration: 1.5, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
-        tl.to(".text", {text: {value: "Passionate about tech, learning & bringing ideas to life."}, duration: 4, repeatDelay: 2, delay: 1, repeat: 1, yoyo: true, ease: "none"});
+        tl.to(".text", {text: {value: "Passionate about software, learning & bringing ideas to life."}, duration: 4, repeatDelay: 2, repeat: 1, yoyo: true, delay: 1, ease: "none"});
         tl.to(".text", {text: {value: "M.Sc. Information Systems @ TUM."}, duration: 3, delay: 1, repeat: 1, repeatDelay: 2, yoyo: true, ease: "none"});
         tl.to(".text", {text: {value: "Scroll to explore."}, duration: 1.5, ease: "none"});
     })
 
     return (
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen bg-green-4 justify-evenly items-center">
-                <div className="flex justify-evenly">
+            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen bg-green-4 justify-center items-center">
+                <div className="flex justify-center my-5 mx-10 lg:justify-end lg:mr-48">
                     <img src={me} alt={"me"}/>
                 </div>
-                <div>
+                <div className="mx-5 lg:m-0 lg:mr-28">
                     <span className="text text-mobile-subheading lg:text-subheading text-white"/>
-                    <span className="cursor inline-block text-mobile-subheading lg:text-subheading max-w-lg text-white">
+                    <span className="cursor inline-block text-mobile-subheading lg:text-subheading text-white">
                         |
                     </span>
                 </div>
