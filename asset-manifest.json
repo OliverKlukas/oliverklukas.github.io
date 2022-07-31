@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3b5d1dd.css",
-    "main.js": "/static/js/main.9ea93126.js",
+    "main.css": "/static/css/main.2addef5d.css",
+    "main.js": "/static/js/main.74f01ef4.js",
     "static/media/remi.gif": "/static/media/remi.f314e999c67f8e45a034.gif",
     "static/media/frest.mp4": "/static/media/frest.729986d90caecaf3f0f9.mp4",
     "static/media/greenewal-full-product.gif": "/static/media/greenewal-full-product.5ae1442a7bd5de02a3fe.gif",
     "static/media/GitHubLogo.svg": "/static/media/GitHubLogo.5c66fe0bf0ff508753559900d00057f0.svg",
     "static/media/GalacticEmpire.gif": "/static/media/GalacticEmpire.1cf0892c119354c6ff27.gif",
-    "static/media/ScrollLogo.svg": "/static/media/ScrollLogo.b4f73162dbc099cf89f598113dc8d4e9.svg",
+    "static/media/me.png": "/static/media/me.1f8d0f9400fbfca4d71f.png",
     "static/media/LinkedInLogo.svg": "/static/media/LinkedInLogo.aec977e351e0a7afe5f12e783e11e5f3.svg",
     "index.html": "/index.html",
-    "main.c3b5d1dd.css.map": "/static/css/main.c3b5d1dd.css.map",
-    "main.9ea93126.js.map": "/static/js/main.9ea93126.js.map"
+    "main.2addef5d.css.map": "/static/css/main.2addef5d.css.map",
+    "main.74f01ef4.js.map": "/static/js/main.74f01ef4.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3b5d1dd.css",
-    "static/js/main.9ea93126.js"
+    "static/css/main.2addef5d.css",
+    "static/js/main.74f01ef4.js"
   ]
 }
