@@ -30,7 +30,7 @@ export default function LandingView() {
     return (
             <div className="lg:grid lg:grid-cols-2 min-h-screen bg-green-4 lg:justify-center lg:items-center">
                 <p className="lg:hidden text-mobile-heading text-white pl-10">Portfolio.</p>
-                <hr className="lg:hidden border-white border mx-10 mb-12"/>
+                <hr className="lg:hidden bg-white border-white border mx-10 mb-12"/>
                 <div className="flex justify-center my-8 mx-16 lg:justify-end lg:mr-48">
                     <img className="drop-shadow-xl" src={me} alt={"me"}/>
                 </div>

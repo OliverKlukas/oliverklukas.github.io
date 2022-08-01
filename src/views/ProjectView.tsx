@@ -56,19 +56,19 @@ export default function ProjectView({timeline} : {timeline: gsap.core.Timeline})
                 <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={remi}
                      alt="Remi the Cooking Assistant"/>
                 <ProjectDescription project={projects[0]} reference={addToRefs}/>
-                <hr ref={addToRefs} className="lg:hidden border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
+                <hr ref={addToRefs} className="lg:hidden bg-black border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
                 <video className="lg:hidden" controls autoPlay muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
                 <ProjectDescription project={projects[1]} reference={addToRefs}/>
-                <hr ref={addToRefs} className="lg:hidden border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
+                <hr ref={addToRefs} className="lg:hidden bg-black border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
                 <video ref={addToRefs} className="hidden lg:block object-cover" style={{width: "90%"}} controls autoPlay
                        muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
                 <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={greenewal} alt="Greenewal"/>
                 <ProjectDescription project={projects[2]} reference={addToRefs}/>
-                <hr ref={addToRefs} className="lg:hidden border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
+                <hr ref={addToRefs} className="lg:hidden bg-black border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
                 <img ref={addToRefs} className="lg:hidden" style={{width: "90%"}} src={galactic}
                      alt="Galactic Empire retro game"/>
                 <ProjectDescription project={projects[3]} reference={addToRefs}/>
