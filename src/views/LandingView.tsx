@@ -28,11 +28,13 @@ export default function LandingView() {
     })
 
     return (
-            <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen bg-green-4 justify-center items-center">
-                <div className="flex justify-center my-5 mx-10 lg:justify-end lg:mr-48">
+            <div className="lg:grid lg:grid-cols-2 min-h-screen bg-green-4 lg:justify-center lg:items-center">
+                <p className="lg:hidden text-mobile-heading text-white pl-10">Portfolio.</p>
+                <hr className="lg:hidden border-white border mx-10 mb-12"/>
+                <div className="flex justify-center my-8 mx-16 lg:justify-end lg:mr-48">
                     <img className="drop-shadow-xl" src={me} alt={"me"}/>
                 </div>
-                <div className="mx-5 lg:m-0 lg:mr-28">
+                <div className="mx-10 lg:m-0 lg:mr-28">
                     <span className="text text-mobile-subheading lg:text-subheading text-white"/>
                     <span className="cursor inline-block text-mobile-subheading lg:text-subheading text-white">
                         |
