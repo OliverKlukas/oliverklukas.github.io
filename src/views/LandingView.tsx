@@ -27,12 +27,21 @@ export default function LandingView() {
         tl.to(".text", {text: {value: "Scroll to explore."}, duration: 1.5, delay: 1, ease: "none"});
     })
 
+    // Mouse animation for entering profile picture.
+    const onEnter = ({currentTarget} : React.MouseEvent) => {
+        gsap.to(currentTarget, { scale: 1.2, duration: 1, rotation: "+360", ease: "power1.out"});
+    }
+
+    // Mouse animation for leaving profile picture.
+    const onLeave = ({currentTarget} : React.MouseEvent) => {
+        gsap.set(currentTarget, {rotation: "+0"});
+        gsap.to(currentTarget, {scale: 1});
+    }
+
     return (
             <div className="lg:grid lg:grid-cols-2 min-h-screen bg-green-4 lg:justify-center lg:items-center">
-                <p className="lg:hidden text-mobile-heading text-white pl-10">Portfolio.</p>
-                <hr className="lg:hidden bg-white border-white border mx-10 mb-12"/>
-                <div className="flex justify-center my-8 mx-16 lg:justify-end lg:mr-48">
-                    <img className="drop-shadow-xl" src={me} alt={"me"}/>
+                <div className="flex justify-center py-16 mx-16 lg:justify-end lg:mr-48">
+                    <img className="drop-shadow-xl" onClick={onEnter} onMouseEnter={onEnter} onMouseLeave={onLeave} src={me} alt={"me"}/>
                 </div>
                 <div className="mx-10 lg:m-0 lg:mr-28">
                     <span className="text text-mobile-subheading lg:text-subheading text-white"/>

@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
  *
  * @return {div}
  */
-export default function ProjectView({timeline} : {timeline: gsap.core.Timeline}) {
+export default function ProjectView() {
     // Define gsap scrolling reference.
     const revealRefs = useRef([]);
     revealRefs.current = [];
