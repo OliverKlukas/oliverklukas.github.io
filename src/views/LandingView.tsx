@@ -25,7 +25,7 @@ export default function LandingView() {
         tl.to(".text", {text: {value: "Passionate about software, learning & bringing ideas to life."}, duration: 4, repeatDelay: 2, repeat: 1, yoyo: true, delay: 1, ease: "none"});
         tl.to(".text", {text: {value: "M.Sc. Information Systems @ TUM & Sorbonne."}, duration: 3, delay: 1, repeat: 1, repeatDelay: 2, yoyo: true, ease: "none"});
         tl.to(".text", {text: {value: "Scroll to explore."}, duration: 1.5, delay: 1, ease: "none"});
-    })
+    }, []);
 
     // Mouse animation for entering profile picture.
     const onEnter = ({currentTarget} : React.MouseEvent) => {
