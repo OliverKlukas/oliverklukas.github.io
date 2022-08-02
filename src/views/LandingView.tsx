@@ -52,8 +52,8 @@ export default function LandingView() {
                     <img className="drop-shadow-xl" onClick={onClick} onMouseEnter={onEnter} onMouseLeave={onLeave} src={me} alt={"me"}/>
                 </div>
                 <div className="mx-10 lg:m-0 lg:mr-28">
-                    <span className="text text-mobile-subheading lg:text-subheading text-white"/>
-                    <span className="cursor inline-block text-mobile-subheading lg:text-subheading text-white">
+                    <span className="text text-mobile-paragraph md:text-mobile-subheading lg:text-subheading text-white"/>
+                    <span className="cursor inline-block text-mobile-paragraph md:text-mobile-subheading lg:text-subheading text-white">
                         |
                     </span>
                 </div>
