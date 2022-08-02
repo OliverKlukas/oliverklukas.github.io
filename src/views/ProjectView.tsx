@@ -49,7 +49,7 @@ export default function ProjectView() {
     };
 
     return (
-        <div>
+        <div className="bg-white">
             <p ref={addToRefs} className="text-mobile-heading lg:text-heading pl-10">Stories.</p>
             <hr ref={addToRefs} className="border-black border bg-black ml-10 mr-10 lg:mr-20"/>
             <div className="grid lg:grid-cols-2 gap-x-6 gap-y-12 m-7 lg:m-20 items-center justify-items-center">

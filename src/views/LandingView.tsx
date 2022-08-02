@@ -38,10 +38,18 @@ export default function LandingView() {
         gsap.to(currentTarget, {scale: 1});
     }
 
+    // Mouse animation for clicking profile picture.
+    const onClick = ({currentTarget} : React.MouseEvent) => {
+        gsap.timeline()
+            .to(currentTarget, { scale: 1.2, duration: 1, rotation: "+360", ease: "power1.out"})
+            .set(currentTarget, {rotation: "+0"}, "+=2")
+            .to(currentTarget, {scale: 1});
+    }
+
     return (
             <div className="lg:grid lg:grid-cols-2 min-h-screen bg-green-4 lg:justify-center lg:items-center">
                 <div className="flex justify-center py-16 mx-16 lg:justify-end lg:mr-48">
-                    <img className="drop-shadow-xl" onClick={onEnter} onMouseEnter={onEnter} onMouseLeave={onLeave} src={me} alt={"me"}/>
+                    <img className="drop-shadow-xl" onClick={onClick} onMouseEnter={onEnter} onMouseLeave={onLeave} src={me} alt={"me"}/>
                 </div>
                 <div className="mx-10 lg:m-0 lg:mr-28">
                     <span className="text text-mobile-subheading lg:text-subheading text-white"/>

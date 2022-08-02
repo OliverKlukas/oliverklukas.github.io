@@ -9,7 +9,7 @@ import {ReactComponent as GitHubLogo} from "./../asssets/GitHubLogo.svg";
  */
 export default function ContactView() {
     return (
-        <div className="flex flex-col min-h-screen justify-center space-y-14 lg:space-y-28 items-center">
+        <div className="flex flex-col bg-white min-h-screen justify-center space-y-14 lg:space-y-28 items-center">
             <div className="text-center">
                 <p className="text-mobile-heading lg:text-heading">The end.</p>
                 <p className="text-mobile-standard lg:text-standard mt-4 ml-4 mr-4 lg:max-w-4xl">That&apos;s it,
