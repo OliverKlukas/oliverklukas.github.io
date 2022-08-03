@@ -19,10 +19,10 @@ export default function ContactView() {
             </div>
             <div className="flex space-x-9 lg:space-x-20">
                 <a href="https://github.com/OliverKlukas" target={"_blank"} rel="noreferrer">
-                    <GitHubLogo className="h-24 lg:h-32 hover:opacity-80 drop-shadow-xl"/>
+                    <GitHubLogo className="hover:scale-110 ease-in duration-500 h-24 lg:h-32 hover:opacity-80 drop-shadow-xl"/>
                 </a>
                 <a href="https://www.linkedin.com/in/oliver-klukas/" target={"_blank"} rel="noreferrer">
-                    <LinkedInLogo className="h-24 lg:h-32 hover:opacity-80 drop-shadow-xl"/>
+                    <LinkedInLogo className="hover:scale-110 ease-in duration-500 h-24 lg:h-32 hover:opacity-80 drop-shadow-xl"/>
                 </a>
             </div>
         </div>
