@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.844d9b96.css",
-    "main.js": "/static/js/main.e04cf2cc.js",
+    "main.css": "/static/css/main.d9a5eb71.css",
+    "main.js": "/static/js/main.5c2e22e9.js",
     "static/media/remi.gif": "/static/media/remi.f314e999c67f8e45a034.gif",
     "static/media/frest.mp4": "/static/media/frest.729986d90caecaf3f0f9.mp4",
     "static/media/greenewal-full-product.gif": "/static/media/greenewal-full-product.5ae1442a7bd5de02a3fe.gif",
@@ -10,11 +10,11 @@
     "static/media/me.png": "/static/media/me.1f8d0f9400fbfca4d71f.png",
     "static/media/LinkedInLogo.svg": "/static/media/LinkedInLogo.aec977e351e0a7afe5f12e783e11e5f3.svg",
     "index.html": "/index.html",
-    "main.844d9b96.css.map": "/static/css/main.844d9b96.css.map",
-    "main.e04cf2cc.js.map": "/static/js/main.e04cf2cc.js.map"
+    "main.d9a5eb71.css.map": "/static/css/main.d9a5eb71.css.map",
+    "main.5c2e22e9.js.map": "/static/js/main.5c2e22e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.844d9b96.css",
-    "static/js/main.e04cf2cc.js"
+    "static/css/main.d9a5eb71.css",
+    "static/js/main.5c2e22e9.js"
   ]
 }
