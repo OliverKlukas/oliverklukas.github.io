@@ -28,17 +28,7 @@ function App() {
     const scroll = (section: string) => {
         const scrollReference = document.querySelector(section);
         if (scrollReference != null) {
-            switch (section) {
-                case "#landing":
-                    setActiveSection(0);
-                    break;
-                case "#stories":
-                    setActiveSection(1);
-                    break;
-                default:
-                    setActiveSection(2);
-            }
-            scrollReference.scrollIntoView({behavior: 'smooth', block: 'start'});
+            scrollReference.scrollIntoView({behavior: 'smooth'});
         }
     }
 
