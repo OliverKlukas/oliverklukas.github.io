@@ -72,7 +72,7 @@ export default function ProjectView() {
                 <img ref={addToRefs} className="lg:hidden" style={{width: "90%"}} src={galactic}
                      alt="Galactic Empire retro game"/>
                 <ProjectDescription project={projects[3]} reference={addToRefs}/>
-                <img ref={addToRefs} className="hidden lg:block object-cover" style={{width: "90%"}} src={galactic}
+                <img ref={addToRefs} className="mb-10 hidden lg:block object-cover" style={{width: "90%"}} src={galactic}
                      alt="Galactic Empire retro game"/>
             </div>
         </div>

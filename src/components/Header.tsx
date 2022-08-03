@@ -10,10 +10,10 @@ import React from "react";
 function Header({activeSection, scroll} : {activeSection : number, scroll : (section : string) => void}){
 
     return(
-        <div className="flex bg-green-4 text-white gap-2 lg:gap-4 justify-end sticky top-0 z-50 pr-2 lg:pr-4 py-1 lg:py-2">
-            <button onClick={() => scroll("#landing")} className={`${activeSection == 0 && "font-bold"} text-mobile-standard lg:text-standard`}>.me()</button>
-            <button onClick={() => scroll("#stories")} className={`${activeSection == 1 && "font-bold"} text-mobile-standard lg:text-standard`}>.stories()</button>
-            <button onClick={() => scroll("#contact")} className={`${activeSection == 2 && "font-bold"} text-mobile-standard lg:text-standard`}>.contact()</button>
+        <div className={`flex text-mobile-standard ${activeSection == 0 ? "text-white bg-green-4" : "text-black bg-white"} gap-2 lg:gap-4 justify-end sticky top-0 z-50 pr-2 lg:pr-4 py-1 lg:py-1.5`}>
+            <button onClick={() => scroll("#landing")} className={`${activeSection == 0 && "font-bold"}`}>.me()</button>
+            <button onClick={() => scroll("#stories")} className={`${activeSection == 1 && "font-bold"}`}>.stories()</button>
+            <button onClick={() => scroll("#contact")} className={`${activeSection == 2 && "font-bold"}`}>.contact()</button>
         </div>
     )
 }

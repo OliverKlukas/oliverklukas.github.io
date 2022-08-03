@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
  *
  * Copied from https://stackoverflow.com/a/36862446.
  *
- * @return {number, number} - window width and height.
+ * @return {width: number, height: number} - window width and height.
  */
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
