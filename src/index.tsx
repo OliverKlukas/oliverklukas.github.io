@@ -1,9 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {createRoot} from "react-dom/client";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root') as HTMLElement);
+root.render(
     <React.StrictMode>
         <style>
             {/* eslint-disable-next-line react/no-unescaped-entities */}
@@ -11,5 +12,4 @@ ReactDOM.render(
         </style>
         <App/>
     </React.StrictMode>,
-    document.getElementById('root')
 );

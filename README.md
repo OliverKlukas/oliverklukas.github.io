@@ -16,7 +16,7 @@ Continuously evolving collection of cool projects I've done in the past, some ra
 # Technical documentation
 
 ## Prerequisites
-- React.js: ^17.x
+- React.js: ^18.x
 - Node.js: ^16.x
 
 ## Run commands

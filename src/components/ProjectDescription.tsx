@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useId} from 'react';
 import {LinkButton} from "./LinkButton";
 import {DownloadButton} from "./DownloadButton";
+import {gsap} from "gsap";
 
 const colors = ['bg-green-5', 'bg-green-4', 'bg-green-3','bg-green-2', 'bg-green-1']
 
@@ -12,6 +13,28 @@ const colors = ['bg-green-5', 'bg-green-4', 'bg-green-3','bg-green-2', 'bg-green
  * @return {div}
  */
 export default function ProjectDescription({project, reference}: {project : project, reference : React.LegacyRef<HTMLDivElement>}) {
+    // Mouse animations for hovering and clicking the tech stack bar and labels.
+    const onEnter = ({currentTarget} : React.MouseEvent) => {
+        gsap.to(`.${currentTarget.id+"-bar"}`, { scaleY: 1.5, opacity: 0.9, duration: 1, ease: "power1.out"});
+        gsap.to(`.${currentTarget.id+"-label"}`, { scale: 1.01, opacity: 0.7, duration: 1, ease: "power1.out"});
+    }
+    const onLeave = ({currentTarget} : React.MouseEvent) => {
+        gsap.to(`.${currentTarget.id+"-bar"}`, {scale: 1, opacity: 1, duration: 1, ease: "power1.out"});
+        gsap.to(`.${currentTarget.id+"-label"}`, { scale: 1, opacity: 1, duration: 1, ease: "power1.out"});
+    }
+    const onClick = ({currentTarget} : React.MouseEvent) => {
+        gsap.timeline()
+            .add("start")
+            .to(`.${currentTarget.id+"-bar"}`, { scaleY: 1.5, opacity: 0.9, duration: 1, ease: "power1.out"}, "start")
+            .to(`.${currentTarget.id+"-label"}`, { scale: 1.01, opacity: 0.7, duration: 1, ease: "power1.out"}, "start")
+            .add("end", "+=1")
+            .to(`.${currentTarget.id+"-bar"}`, {scale: 1, opacity: 1, duration: 1, ease: "power1.out"}, "end")
+            .to(`.${currentTarget.id+"-label"}`, { scale: 1, opacity: 1, duration: 1, ease: "power1.out"}, "end");
+    }
+
+    // Give project unique id for mapping and animation.
+    const projectId = "id-" + useId().replaceAll(":", "") + "-";
+
     return (
         <div className="flex flex-col lg:min-h-screen justify-center space-y-4 lg:w-[90%]" ref={reference}>
             <p className="leading-tight text-mobile-subheading lg:text-subheading">{project.title}</p>
@@ -19,12 +42,12 @@ export default function ProjectDescription({project, reference}: {project : proj
             <p className="text-mobile-paragraph lg:text-paragraph pt-2">Tech Stack</p>
             <div className="flex w-[97%]">
                 {project.stack.map((item, index) => (
-                    <div key={index} style={{width: `${item.share}%`}} className={`first:rounded-l-lg last:rounded-r-lg h-4 ${colors[index]}`}/>
+                    <div onClick={onClick} onMouseEnter={onEnter} onMouseLeave={onLeave} id={projectId+index} key={projectId+"-bar-"+item.name} style={{width: `${item.share}%`}} className={`${projectId+index+"-bar"} first:rounded-l-lg last:rounded-r-lg h-4 ${colors[index]}`}/>
                 ))}
             </div>
             <div className="grid grid-cols-2">
                 {project.stack.map((item, index) => (
-                    <div key={index} className="flex items-center space-x-2">
+                    <div onClick={onClick} onMouseEnter={onEnter} onMouseLeave={onLeave} id={projectId+index} key={projectId+"-label-"+item.name} className={`${projectId+index+"-label"} flex items-center space-x-2`}>
                         <div className={`w-4 h-4 rounded-full ${colors[index]}`}/>
                         <div className="text-mobile-standard lg:text-standard">{item.name}</div>
                         <div className="text-mobile-standard lg:text-standard text-grey">{" " + item.share + "%"}</div>
