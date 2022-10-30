@@ -24,7 +24,7 @@ export default function LandingView() {
         firstAnimationActive && gsap.fromTo(".cursor", {autoAlpha: 0, x: -10}, {autoAlpha: 1, duration: 0.7, repeat: -1, ease: "steps (1)"});
         tl.to(".text", {text: {value: "Hi there!"}, duration: 1.5, delay: 1,  repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
         tl.to(".text", {text: {value: "I&apos;m olli."}, duration: 1.5, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
-        tl.to(".text", {text: {value: "23 years old & based in Munich."}, duration: 2.8, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
+        tl.to(".text", {text: {value: "24 years old & based in Munich."}, duration: 2.8, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
         tl.to(".text", {text: {value: "Passionate about software, learning & bringing ideas to life."}, duration: 4, repeatDelay: 2, repeat: 1, yoyo: true, delay: 1, ease: "none"});
         tl.to(".text", {text: {value: "M.Sc. Information Systems @ TUM & Sorbonne Université."}, duration: 3.8, delay: 1, repeat: 1, repeatDelay: 2, yoyo: true, ease: "none"});
         tl.to(".text", {text: {value: "Scroll to explore."}, duration: 1.5, delay: 1, ease: "none", onComplete: () => setFirstAnimationActive(false)});
