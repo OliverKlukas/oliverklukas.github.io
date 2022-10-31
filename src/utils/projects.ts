@@ -26,14 +26,13 @@ export const projects: project[] = [
     },
     {
         title: "OnePill",
-        description: "THINK. MAKE. START. - Winner of the best prototype award 2022.",
+        description: "Won the prize for the best prototype as a technical developer at the two-week THINK. MAKE. START. makeathon, where over 50 highly motivated students come together to develop innovative technical products using design thinking.\n\nBuilt a fully functional prototype through micro controller programming, 3D printing and laser cutting that can produce medical capsules for individualized drug production.",
         stack: [
-            {name: "Design Thinking", share: 45},
-            {name: "Laser Cutting", share: 40},
-            {name: "3D Printing", share: 10},
-            {name: "Embedded Hardware Assembling", share: 5},
-            {name: "Customer-centered Engineering", share: 10},
-            {name: "Sleep deprivation", share: 10}
+            {name: "Laser cutting", share: 30},
+            {name: "Embedded engineering", share: 30},
+            {name: "3D Printing", share: 20},
+            {name: "Customer-centered design", share: 15},
+            {name: "Headache medicine", share: 5}
         ],
         projectVideoLink: "https://www.youtube.com/watch?v=PNsIBQ9Uw6I",
     },
@@ -43,8 +42,8 @@ export const projects: project[] = [
         stack: [
             {name: "Design Thinking", share: 45},
             {name: "figma", share: 40},
-            {name: "storytelling", share: 10},
-            {name: "coffee", share: 5}
+            {name: "Storytelling", share: 10},
+            {name: "Coffee", share: 5}
         ],
         pitchLink: "./team-9-altair-greenewal-final.pdf",
     },

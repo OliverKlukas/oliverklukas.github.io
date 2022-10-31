@@ -59,11 +59,11 @@ export default function ProjectView() {
                 <video ref={addToRefs} className="object-cover" style={{width: "90%"}} controls autoPlay muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
-                <iframe width="560" height="315"
+                <iframe width="90%" height="45%"
                         src="https://www.youtube-nocookie.com/embed/R5Rs-sDh5Es?controls=0&amp;start=1407"
-                        title="YouTube video player" frameBorder="0"
+                        title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen></iframe>
+                        allowFullScreen/>
                 <ProjectDescription project={projects[2]} reference={addToRefs}/>
                 <ProjectDescription project={projects[3]} reference={addToRefs}/>
                 <img ref={addToRefs} className="rounded-[62px]" src={greenewal} alt="Greenewal"/>
@@ -79,11 +79,18 @@ export default function ProjectView() {
                 </video>
                 <ProjectDescription project={projects[1]} reference={addToRefs}/>
                 <hr ref={addToRefs} className="bg-black border-black w-full border bg-black ml-10 mr-10"/>
-                <img ref={addToRefs} className="rounded-[50px]" src={greenewal} alt="Greenewal"/>
+                <iframe width="95%" height="100%"
+                        src="https://www.youtube-nocookie.com/embed/R5Rs-sDh5Es?controls=0&amp;start=1407"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen/>
                 <ProjectDescription project={projects[2]} reference={addToRefs}/>
                 <hr ref={addToRefs} className="bg-black border-black w-full border bg-black ml-10 mr-10"/>
-                <img ref={addToRefs} style={{width: "90%"}} src={galactic} alt="Galactic Empire retro game"/>
+                <img ref={addToRefs} className="rounded-[50px]" src={greenewal} alt="Greenewal"/>
                 <ProjectDescription project={projects[3]} reference={addToRefs}/>
+                <hr ref={addToRefs} className="bg-black border-black w-full border bg-black ml-10 mr-10"/>
+                <img ref={addToRefs} style={{width: "90%"}} src={galactic} alt="Galactic Empire retro game"/>
+                <ProjectDescription project={projects[4]} reference={addToRefs}/>
             </div>
         </div>
     )

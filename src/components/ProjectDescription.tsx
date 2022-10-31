@@ -45,7 +45,7 @@ export default function ProjectDescription({project, reference}: {project : proj
                     <div onClick={onClick} onMouseEnter={onEnter} onMouseLeave={onLeave} id={projectId+index} key={projectId+"-bar-"+item.name} style={{width: `${item.share}%`}} className={`${projectId+index+"-bar"} first:rounded-l-lg last:rounded-r-lg h-4 ${colors[index]}`}/>
                 ))}
             </div>
-            <div className="grid grid-cols-2">
+            <div className="grid lg:grid-cols-2">
                 {project.stack.map((item, index) => (
                     <div onClick={onClick} onMouseEnter={onEnter} onMouseLeave={onLeave} id={projectId+index} key={projectId+"-label-"+item.name} className={`${projectId+index+"-label"} flex items-center space-x-2`}>
                         <div className={`w-4 h-4 rounded-full ${colors[index]}`}/>
@@ -57,7 +57,7 @@ export default function ProjectDescription({project, reference}: {project : proj
             <div className="flex pt-4 lg:pt-7">
                 {project.githubLink != null && <LinkButton title={"GitHub"} link={project.githubLink}/>}
                 {project.liveLink != null && <LinkButton title={"Live Version"} link={project.liveLink}/>}
-                {project.projectVideoLink != null && <LinkButton title={"Project Teaser"} link={project.projectVideoLink}/>}
+                {project.projectVideoLink != null && <LinkButton title={"Project Video"} link={project.projectVideoLink}/>}
                 {project.pitchLink != null && <DownloadButton title={"Pitch"} link={project.pitchLink}/>}
             </div>
         </div>
