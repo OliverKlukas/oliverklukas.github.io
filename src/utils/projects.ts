@@ -25,6 +25,19 @@ export const projects: project[] = [
         liveLink: "https://frest.info/"
     },
     {
+        title: "OnePill",
+        description: "THINK. MAKE. START. - Winner of the best prototype award 2022.",
+        stack: [
+            {name: "Design Thinking", share: 45},
+            {name: "Laser Cutting", share: 40},
+            {name: "3D Printing", share: 10},
+            {name: "Embedded Hardware Assembling", share: 5},
+            {name: "Customer-centered Engineering", share: 10},
+            {name: "Sleep deprivation", share: 10}
+        ],
+        projectVideoLink: "https://www.youtube.com/watch?v=PNsIBQ9Uw6I",
+    },
+    {
         title: "Greenewal",
         description: "Born out of another hackathon, the Science Hack by TUM:Junge Akademie, my great team of five interdisciplinary students and I develop a new vision for our cities. Inspired by the great Bosco Verticale in Milan, we set out to figure out a way to bring nature back into city life. In other words we asked ourselves: how might we make a green transformation of buildings sustainable and aﬀordable to create enjoyable cities to live in?\n\nAfter various design thinking iterations we came up with greenewal. Greenewal is a modular system that retrofits existing buildings with standardized plant modules in order to achieve optimal vegetation coverage of them. When retrofitting buildings with greenewal one leverages the natural strengths of plants in order to reduce temperatures within and outside of buildings, as well as air pollution and noise levels caused by traffic & significantly lower the energy consumption of existing buildings.",
         stack: [

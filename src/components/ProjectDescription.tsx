@@ -57,6 +57,7 @@ export default function ProjectDescription({project, reference}: {project : proj
             <div className="flex pt-4 lg:pt-7">
                 {project.githubLink != null && <LinkButton title={"GitHub"} link={project.githubLink}/>}
                 {project.liveLink != null && <LinkButton title={"Live Version"} link={project.liveLink}/>}
+                {project.projectVideoLink != null && <LinkButton title={"Project Teaser"} link={project.projectVideoLink}/>}
                 {project.pitchLink != null && <DownloadButton title={"Pitch"} link={project.pitchLink}/>}
             </div>
         </div>

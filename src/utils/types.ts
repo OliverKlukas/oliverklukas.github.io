@@ -15,6 +15,7 @@ declare global {
         stack: technology[],
         githubLink?: string,
         liveLink?: string,
-        pitchLink?: string
+        pitchLink?: string,
+        projectVideoLink?: string
     }
 }

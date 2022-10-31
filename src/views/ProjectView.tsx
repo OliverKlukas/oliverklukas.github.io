@@ -52,28 +52,38 @@ export default function ProjectView() {
         <div className="bg-white">
             <p ref={addToRefs} className="text-mobile-heading lg:text-heading pl-10">Stories.</p>
             <hr ref={addToRefs} className="border-black border bg-black ml-10 mr-10 lg:mr-20"/>
-            <div className="grid lg:grid-cols-2 gap-x-6 gap-y-12 m-7 lg:m-20 items-center justify-items-center">
-                <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={remi}
-                     alt="Remi the Cooking Assistant"/>
+            <div className="hidden lg:grid grid-cols-2 gap-x-6 gap-y-12 m-20 items-center justify-items-center">
+                <img ref={addToRefs} className="rounded-[62px]" src={remi} alt="Remi the Cooking Assistant"/>
                 <ProjectDescription project={projects[0]} reference={addToRefs}/>
-                <hr ref={addToRefs} className="lg:hidden bg-black border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
-                <video className="lg:hidden" controls autoPlay muted loop>
+                <ProjectDescription project={projects[1]} reference={addToRefs}/>
+                <video ref={addToRefs} className="object-cover" style={{width: "90%"}} controls autoPlay muted loop>
+                    <source src={frest} type='video/mp4'/>
+                </video>
+                <iframe width="560" height="315"
+                        src="https://www.youtube-nocookie.com/embed/R5Rs-sDh5Es?controls=0&amp;start=1407"
+                        title="YouTube video player" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen></iframe>
+                <ProjectDescription project={projects[2]} reference={addToRefs}/>
+                <ProjectDescription project={projects[3]} reference={addToRefs}/>
+                <img ref={addToRefs} className="rounded-[62px]" src={greenewal} alt="Greenewal"/>
+                <img ref={addToRefs} className="mb-10 object-cover" style={{width: "90%"}} src={galactic} alt="Galactic Empire retro game"/>
+                <ProjectDescription project={projects[4]} reference={addToRefs}/>
+            </div>
+            <div className="lg:hidden grid gap-x-6 gap-y-12 m-7 items-center justify-items-center">
+                <img ref={addToRefs} className="rounded-[50px]" src={remi} alt="Remi the Cooking Assistant"/>
+                <ProjectDescription project={projects[0]} reference={addToRefs}/>
+                <hr ref={addToRefs} className="bg-black border-black w-full border bg-black ml-10 mr-10"/>
+                <video controls autoPlay muted loop>
                     <source src={frest} type='video/mp4'/>
                 </video>
                 <ProjectDescription project={projects[1]} reference={addToRefs}/>
-                <hr ref={addToRefs} className="lg:hidden bg-black border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
-                <video ref={addToRefs} className="hidden lg:block object-cover" style={{width: "90%"}} controls autoPlay
-                       muted loop>
-                    <source src={frest} type='video/mp4'/>
-                </video>
-                <img ref={addToRefs} className="rounded-[50px] lg:rounded-[62px]" src={greenewal} alt="Greenewal"/>
+                <hr ref={addToRefs} className="bg-black border-black w-full border bg-black ml-10 mr-10"/>
+                <img ref={addToRefs} className="rounded-[50px]" src={greenewal} alt="Greenewal"/>
                 <ProjectDescription project={projects[2]} reference={addToRefs}/>
-                <hr ref={addToRefs} className="lg:hidden bg-black border-black w-full border bg-black ml-10 mr-10 lg:mr-20"/>
-                <img ref={addToRefs} className="lg:hidden" style={{width: "90%"}} src={galactic}
-                     alt="Galactic Empire retro game"/>
+                <hr ref={addToRefs} className="bg-black border-black w-full border bg-black ml-10 mr-10"/>
+                <img ref={addToRefs} style={{width: "90%"}} src={galactic} alt="Galactic Empire retro game"/>
                 <ProjectDescription project={projects[3]} reference={addToRefs}/>
-                <img ref={addToRefs} className="mb-10 hidden lg:block object-cover" style={{width: "90%"}} src={galactic}
-                     alt="Galactic Empire retro game"/>
             </div>
         </div>
     )
