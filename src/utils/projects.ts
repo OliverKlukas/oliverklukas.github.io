@@ -26,7 +26,7 @@ export const projects: project[] = [
     },
     {
         title: "OnePill",
-        description: "Won the prize for the best prototype as a technical developer at the two-week THINK. MAKE. START. makeathon, where over 50 highly motivated students come together to develop innovative technical products using design thinking.\n\nBuilt a fully functional prototype through micro controller programming, 3D printing and laser cutting that can produce medical capsules for individualized drug production.",
+        description: "Won the prize for the best prototype as a technical developer at the two-week THINK. MAKE. START. makeathon, where over 50 highly motivated students come together to develop innovative technical products using customer-centered engineering.\n\nBuilt a fully functional prototype through micro controller programming, 3D printing and laser cutting that can produce medical capsules for individualized drug production.",
         stack: [
             {name: "Laser cutting", share: 30},
             {name: "Embedded engineering", share: 30},
