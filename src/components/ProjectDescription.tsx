@@ -45,7 +45,7 @@ export default function ProjectDescription({project, reference}: {project : proj
                     <div onClick={onClick} onMouseEnter={onEnter} onMouseLeave={onLeave} id={projectId+index} key={projectId+"-bar-"+item.name} style={{width: `${item.share}%`}} className={`${projectId+index+"-bar"} first:rounded-l-lg last:rounded-r-lg h-4 ${colors[index]}`}/>
                 ))}
             </div>
-            <div className="grid lg:grid-cols-2">
+            <div className="grid md:grid-cols-2">
                 {project.stack.map((item, index) => (
                     <div onClick={onClick} onMouseEnter={onEnter} onMouseLeave={onLeave} id={projectId+index} key={projectId+"-label-"+item.name} className={`${projectId+index+"-label"} flex items-center space-x-2`}>
                         <div className={`w-4 h-4 rounded-full ${colors[index]}`}/>
