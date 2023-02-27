@@ -2,6 +2,7 @@ import React, {useLayoutEffect, useState} from 'react';
 import me from './../asssets/me.png'
 import {gsap} from "gsap";
 import {TextPlugin} from "gsap/TextPlugin";
+import {ReactComponent as ScrollLogo} from "../asssets/ScrollLogo.svg";
 
 // Add gsap text animation plugin.
 gsap.registerPlugin(TextPlugin);
@@ -22,16 +23,18 @@ export default function LandingView() {
     // Trigger animation for texts writing.
     useLayoutEffect(() => {
         firstAnimationActive && gsap.fromTo(".cursor", {autoAlpha: 0, x: -10}, {autoAlpha: 1, duration: 0.7, repeat: -1, ease: "steps (1)"});
-        tl.to(".text", {text: {value: "Hi there!"}, duration: 1.5, delay: 1,  repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
-        tl.to(".text", {text: {value: "I&apos;m Olli."}, duration: 1.5, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
-        tl.to(".text", {text: {value: "24 years old & based in Munich, Germany."}, duration: 3.1, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
-        tl.to(".text", {text: {value: "Passionate about software, learning & bringing ideas to life."}, duration: 4, repeatDelay: 2, repeat: 1, yoyo: true, delay: 1, ease: "none"});
-        tl.to(".text", {text: {value: "M.Sc. Information Systems @ TUM & Sorbonne Université."}, duration: 3.8, delay: 1, repeat: 1, repeatDelay: 2, yoyo: true, ease: "none"});
+        // tl.to(".text", {text: {value: "Hi there!"}, duration: 1.5, delay: 1,  repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
+        // tl.to(".text", {text: {value: "I&apos;m Olli."}, duration: 1.5, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
+        // tl.to(".text", {text: {value: "24 years old & based in Munich, Germany."}, duration: 3.1, delay: 1, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
+        // tl.to(".text", {text: {value: "Passionate about software, learning & bringing ideas to life."}, duration: 4, repeatDelay: 2, repeat: 1, yoyo: true, delay: 1, ease: "none"});
+        // tl.to(".text", {text: {value: "M.Sc. Information Systems @ TUM & Sorbonne Université."}, duration: 3.8, delay: 1, repeat: 1, repeatDelay: 2, yoyo: true, ease: "none"});
         tl.to(".text", {text: {value: "Scroll to explore."}, duration: 1.5, delay: 1, ease: "none", onComplete: () => setFirstAnimationActive(false)});
+        tl.to(".bouncer", {opacity: 1})
     }, []);
 
     return (
-            <div className="min-h-screen bg-green-4 lg:grid lg:grid-cols-2 lg:justify-center lg:items-center">
+        <div>
+            <div className="grid min-h-screen bg-green-4 content-around lg:grid-cols-2 lg:justify-center lg:items-center">
                 <div className="flex justify-center py-16 mx-16 lg:justify-end lg:mr-48">
                     <img className="drop-shadow-xl hover:scale-110 hover:rotate-[360deg] ease-in duration-1000" src={me} alt={"profile picture"}/>
                 </div>
@@ -43,6 +46,11 @@ export default function LandingView() {
                         </span>}
                     </span>
                 </div>
+                <div className="bouncer opacity-0 flex lg:col-span-2 justify-center">
+                    <ScrollLogo className="animate-bounce drop-shadow-xl"/>
+                </div>
             </div>
+        </div>
+
     )
 }
