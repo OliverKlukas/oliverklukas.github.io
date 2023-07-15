@@ -34,10 +34,10 @@ export default function LandingView() {
 
     return (
         <div className="grid min-h-screen bg-green-4 lg:grid-cols-2 lg:justify-center lg:items-center">
-                <div className="flex justify-center pt-20 lg:py-16 mx-16 lg:justify-end lg:mr-48">
+                <div className="flex justify-center pt-20 lg:pb-16 lg:pt-44 mx-16 lg:justify-end lg:mr-48">
                     <img className="drop-shadow-xl h-fit hover:scale-110 hover:rotate-[360deg] ease-in duration-1000" src={me} alt={"profile picture"}/>
                 </div>
-                <div className="flex justify-center text-center lg:justify-start lg:flex-none lg:text-left mx-10 lg:m-0 lg:mr-28">
+                <div className="flex justify-center lg:pb-16 lg:pt-44 text-center lg:justify-start lg:flex-none lg:text-left mx-10 lg:m-0 lg:mr-28">
                     <span>
                         <span className="text text-mobile-paragraph md:text-mobile-subheading lg:text-subheading text-white"/>
                         {firstAnimationActive && <span className="cursor inline-block text-mobile-paragraph md:text-mobile-subheading lg:text-subheading text-white">
