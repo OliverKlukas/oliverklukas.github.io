@@ -13,6 +13,16 @@ export const projects: project[] = [
         githubLink: "https://github.com/OliverKlukas/GPT-3-Recipe-Generator"
     },
     {
+        title: "PEAKFOCUS",
+        description: "Focusing during critical moments is hard. Harnessing your peak performance in high-stakes situations on a consistent basis is even more difficult. That's why professional athletes came up with a solution, they build routines that help them deliver performance consistently and repeatably. This is where PEAKFOCUS comes into play, we developed an application based on neurofeedback of live brain EEG data that allows everyone to reproduce focus through building routines.\n\nTo achieve this, one simply has to utilize our application that we developed during a 24h hackathon. Connect a neurofeedback device calibrated to the most sensitive brain areas for concentration and focus, open our application and start your routine. The application will then guide you through your routine and provide you with feedback on your focus levels. Sounds interesting? Check out our GitHub repository to learn more about our project.",
+        stack: [
+            {name: "Brain EEGs", share: 50},
+            {name: "Flutter & Dart", share: 25},
+            {name: "Y-Food & Golf Clubs", share: 25}
+        ],
+        githubLink: "https://github.com/StartHack-PSFO/PeakFocus"
+    },
+    {
         title: "frest.info",
         description: "A tool that brings joy to homeowners lost in the German bureaucratic jungle. Developed during my three-month journey at the Digital Product School, a full-time programme at UnternehmerTUM GmbH to gain hands-on experience in discovering business opportunities and developing digital products that users love.\n\nTogether with an interdisciplinary team, we were challenged by Interhyp AG to simplify energy-efficiency renovations in Germany and make them a joyful experience for homeowners. Using a decision tree with extensive research into German subsidy guidelines, we developed a website that offers homeowners individual advice on energy-efficient renovations and their subsidy options, thus contributing to a more sustainable housing sector in Germany.",
         stack: [
