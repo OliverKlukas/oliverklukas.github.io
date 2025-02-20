@@ -58,7 +58,7 @@ export default function ProjectView() {
                 <ProjectDescription project={projects[0]} reference={addToRefs}/>
 
                 <ProjectDescription project={projects[1]} reference={addToRefs}/>
-                <div className="w-auto h-90vh rounded-[105px] overflow-hidden">
+                <div className="w-auto h-90vh rounded-[80px] overflow-hidden">
                     <video ref={addToRefs} className="h-full w-full" style={{ clipPath: 'inset(0.2cm 0.55cm 0.1cm 0.7cm)' }} controls autoPlay muted loop>
                         <source src={peakFocusMp4} type='video/mp4' />
                     </video>
