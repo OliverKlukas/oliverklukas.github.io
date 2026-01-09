@@ -24,10 +24,8 @@ export default function LandingView() {
     useLayoutEffect(() => {
         firstAnimationActive && gsap.fromTo(".cursor", {autoAlpha: 0, x: -10}, {autoAlpha: 1, duration: 0.7, repeat: -1, ease: "steps (1)"});
         tl.to(".text", {text: {value: "Hi there!"}, duration: 0.5, delay: 0.75,  repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
-        tl.to(".text", {text: {value: "I&apos;m Olli."}, duration: 0.5, delay: 0.75, repeat: 1, yoyo: true, ease: "none", repeatDelay: 2});
-        tl.to(".text", {text: {value: "26 years old & based in Munich, Germany."}, duration: 1.75, delay: 0.75, repeat: 1, yoyo: true, ease: "none", repeatDelay: 3});
-        tl.to(".text", {text: {value: "Passionate about software, learning & bringing ideas to life."}, duration: 2, repeatDelay: 4, repeat: 1, yoyo: true, delay: 0.75, ease: "none"});
-        tl.to(".text", {text: {value: "M.Sc. Information Systems @ TUM & Sorbonne Université."}, duration: 2, delay: 0.75, repeat: 1, repeatDelay: 4, yoyo: true, ease: "none"});
+        tl.to(".text", {text: {value: "I&apos;m Olli, 27 years old & based in Germany."}, duration: 1.75, delay: 0.75, repeat: 1, yoyo: true, ease: "none", repeatDelay: 3});
+        tl.to(".text", {text: {value: "My passion is software, learning & bringing ideas to life."}, duration: 2, repeatDelay: 4, repeat: 1, yoyo: true, delay: 0.75, ease: "none"});
         tl.to(".text", {text: {value: "Scroll to explore."}, duration: 0.75, delay: 0.75, ease: "none", onComplete: () => setFirstAnimationActive(false)});
         tl.to(".bouncer", {opacity: 1, duration: 5, ease: "power2"});
     }, []);

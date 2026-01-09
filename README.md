@@ -5,8 +5,6 @@ Continuously evolving collection of cool projects I've done in the past, some ra
 ## Check it out
 [![portfolio](https://user-images.githubusercontent.com/39443615/178351885-8ccf4668-93d7-4531-8870-75efc4277f68.gif)](https://oliverklukas.github.io/)
 
-
-
 ## Tech stack
 1. React with TypeScript as the backbone
 2. Tailwind CSS to make things look good
@@ -22,6 +20,7 @@ Continuously evolving collection of cool projects I've done in the past, some ra
 ## Run commands
 ```shell
 # Run locally at http://localhost:3000/
+nvm use
 npm install
 npm start
 ```
